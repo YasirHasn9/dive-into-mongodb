@@ -92,3 +92,29 @@ to know in which folder we are working we can use `pwd()`
 to view a file `cat + filePath`
 
 `sleep("mi")` method will suspend the mongo shell for a while and can help with avoiding collisions.
+
+*** note *** 
+when we use flags in a command line it means we are passing additional info
+
+### -----------------------------------
+`./mongorc.js`
+mongo will create a file that enables us to interact with mongo shell and also has access
+to the mongo methods and mongo server object
+
+Now, every object has a constructor. Constructor is a blueprint for future object.
+`futureObj instanceof ConstructorFunction // true`
+we can defined methods and property inside the constructor.
+also we can create new method on the prototype of the constructor.
+the defined method on the prototype can be changed and the constructor can inherit them but
+we can't redefined the ones inside.
+
+
+in real life, wasting storage place is far better than losing a data. Therefore, to avoid a disaster accident
+we need to disable a method that will remove the database.
+we need to change the prototype of the method that will delete a database in case we use it accidentally.
+in `./mongord.js`
+```js
+DB.prototype.dorpDatabase = () => {
+    console.log("deleting a db is forbidden")
+}
+```
