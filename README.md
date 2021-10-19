@@ -135,3 +135,14 @@ Rules for names
 
 Namespace? is the combination of database name and collection name 
 `[database_name].[collection.name or index]`
+
+#### ------------------------------------
+`Document`
+To create a new document, we need a create new key value pairs.
+the key is also called field
+field name:
+1. no null char
+2. to-level field cant start $
+
+with document can have nested object and this is a great feature
+
