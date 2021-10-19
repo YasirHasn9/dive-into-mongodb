@@ -118,3 +118,20 @@ DB.prototype.dorpDatabase = () => {
     console.log("deleting a db is forbidden")
 }
 ```
+
+##### -----------------------------------
+Rules for names
+1. should be unique
+2. length 1-64 char
+3. no null
+4. cannot use `/\. : <> $ ?`
+ to avoid these mistakes 
+ 1. use underscore and letters
+ 2. namespace should be no longer than 120 bytes
+ 3. no $
+ 4. no null char
+ 5. cant begin with system prefix
+ 6. `collection` name can have `.` unlike `db`
+
+Namespace? is the combination of database name and collection name 
+`[database_name].[collection.name or index]`
