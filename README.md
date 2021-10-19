@@ -62,3 +62,33 @@ So MongoDb made of 3 nested layers
 2. Middle: collection 
 3. Inner: documents
 need to create a db and collection and organize your data in documents
+
+
+## --------------------------
+How to interact with mongo shell?
+run the commend line `mongo`
+1. you'll see the version of the shell
+2. connecting to a local service, this may take a min and this is why is connecting
+3. shell and mongo service will exchange info after the connecting is established
+4. if everything goes great we will see a mongoDb server version
+
+mongo shell different form shell prompt 
+mongo shell == MongoDB Enterprise >
+shell prompt === name and where we are at
+
+
+There is a different between the methods of mongo shell and mongo server and they both operate independently.
+shell has native methods and they dont to be prefixed with an object names.
+In mongos shell, there is 3 types of helpers
+`show`, `use`, and `it`
+show helps with showing the databases
+use helps to switch to different db
+it helps to iterate over a db
+
+
+On mongo shell we can write js code with no dom methods such alert or console.log
+
+to know in which folder we are working we can use `pwd()` 
+to view a file `cat + filePath`
+
+`sleep("mi")` method will suspend the mongo shell for a while and can help with avoiding collisions.
