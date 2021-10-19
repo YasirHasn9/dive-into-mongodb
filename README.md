@@ -23,3 +23,42 @@ make sure that we dont have a `running process`
 to find we have a `running process`
 run `pgrep mongod`
 then run `kill <id we got from the above commend line>` to kill and run a new process
+
+## --------------------
+So how mongoDb operate? 
+We need to understand how mongoDb works, mongoDb stores data in a non-relational database.
+Mongo uses dynamic schema to design its data which means no pre-defined storage structure
+1. it uses collection instead of tables
+2. it uses documents instead of rows
+3. it uses key values instead of columns
+4. great flexibility and adaptability 
+The schema made of collection and each collection made of documents and document made of key:value.
+One document is the minium storage unit in Mongodb
+documents from the same collection can have different keys
+Each document has auto generate 12 byte of hexadecimal (unique id)
+one hexadecimal = 4 bits which = 1/2 byte so 12 bytes = 24 digits
+
+collection in MongoDb
+```js
+{
+    "_id":"here is 24 hexadecimal",
+    "name":"Joe",
+    "lastName":"Doe",
+    "address":{
+        "street:"123",
+        "city":" LA",
+    },
+    "hobbies":["coding","surfing"]
+}
+```
+`"_id":"here is 24 hexadecimal"`
+1. the first 4 digits represents a timestamp
+2. 5 middle digits represents a random value
+3. the last 3 digits is incrementing counter
+these feature are so important because they are in ascending order.
+
+So MongoDb made of 3 nested layers
+1. Outside: database 
+2. Middle: collection 
+3. Inner: documents
+need to create a db and collection and organize your data in documents
