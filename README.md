@@ -253,6 +253,15 @@ optionalObject = {
 4. require const `MongoClient` from `mongodb`
 5. create an async function and run the connection
 
+Node + MongoDb --> Socket (TCP)
+so node will connect with Mongodb over the socket
+The good part about socket that if we need to run it
+over different machine(cloud) rather than our local.
+
+Sometimes, the connection is not done yet but whats cool
+about mongoose is gonna queue your quires and dispatch them, once
+the connection is established.
+
 ## General Notes
 
 1. In MongoDB, each document stored in a collection requires a unique \_id field that acts as a primary key
@@ -262,3 +271,19 @@ optionalObject = {
 5. The node driver is an async api. It means with promises or callback function.
 6. `Atlas` is a cloud database
 7. To show the collection run `show collections` in mongo shell
+
+### The Workflow of mongodb
+
+Database
+|\***\*\_\*\*** collection(s)
+|\***\*\_\_\_\_\*\*** document(s)
+|**\_\_\_** JSON-like (key\value)
+
+in sql, if we are trying to access a table that hasn't been created yet, it will crush. But, with mongodb, it will create a new one for us if it didnt been create yet
+.
+
+#### Mongoose
+
+It sits on the top of mongodb driver
+It helps to interact with mongodb
+It has richer developer experience
