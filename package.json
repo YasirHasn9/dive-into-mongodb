@@ -1,0 +1,26 @@
+{
+  "name": "dive-into-mongodb",
+  "version": "1.0.0",
+  "description": "1. install mongodb 2. create an account 3. create a cluster 4. connect: we have several ways to make sure its connected: we can use the shell or the compass that is provided by `Atlas`",
+  "main": "index.js",
+  "scripts": {
+    "start": " node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YasirHasn9/dive-into-mongodb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YasirHasn9/dive-into-mongodb/issues"
+  },
+  "homepage": "https://github.com/YasirHasn9/dive-into-mongodb#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12"
+  }
+}
