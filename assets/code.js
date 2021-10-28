@@ -48,18 +48,33 @@ class Todo {
 	}
 
     // take an old input
+	// async edit(oldTodo) {
+    //     // update the old value
+	// 	const updatedValue = prompt('Enter new msg:', oldTodo.value)
+		
+    //     // send the updated value to our api
+	// 	await fetch('/api/modify', {
+	// 		method: 'POST',
+	// 		body: JSON.stringify({ old: oldTodo.value, new: updatedValue }),
+	// 		headers: {
+	// 			'Content-Type': 'application/json'
+	// 		}
+	// 	})
+	// 	oldTodo.value = updatedValue
+	// }
 	async edit(oldTodo) {
         // update the old value
 		const updatedValue = prompt('Enter new msg:', oldTodo.value)
-		oldTodo.value = updatedValue
+		
         // send the updated value to our api
 		await fetch('/api/modify', {
-			method: 'POST',
+			method: 'PUT',
 			body: JSON.stringify({ old: oldTodo.value, new: updatedValue }),
 			headers: {
 				'Content-Type': 'application/json'
 			}
 		})
+		oldTodo.value = updatedValue
 	}
 
     // takes a todo a value
